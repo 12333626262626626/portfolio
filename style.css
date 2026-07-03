@@ -1,0 +1,755 @@
+/* =======================================
+   VAZGEN MOVSIYAN PORTFOLIO
+   style.css
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#090909;
+    color:white;
+    font-family:'Inter',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* =======================
+LOADER
+======================= */
+
+#loader{
+
+    position:fixed;
+    inset:0;
+
+    background:#000;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    animation:fadeOut 2.5s forwards;
+    animation-delay:1.7s;
+
+}
+
+#loader h1{
+
+    font-size:55px;
+    letter-spacing:8px;
+
+}
+
+#loader p{
+
+    color:#888;
+
+    margin-top:15px;
+
+}
+
+@keyframes fadeOut{
+
+to{
+
+opacity:0;
+visibility:hidden;
+
+}
+
+}
+
+/* =======================
+HEADER
+======================= */
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:25px 60px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+z-index:1000;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(15px);
+
+}
+
+.logo{
+
+font-size:26px;
+
+font-weight:700;
+
+letter-spacing:3px;
+
+}
+
+nav{
+
+display:flex;
+gap:35px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+transition:.3s;
+
+font-weight:500;
+
+}
+
+nav a:hover{
+
+color:#cfcfcf;
+
+}
+
+/* =======================
+HERO
+======================= */
+
+.hero{
+
+height:100vh;
+
+position:relative;
+
+overflow:hidden;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.hero video{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+}
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.55);
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:5;
+
+text-align:center;
+
+animation:appear 1.8s;
+
+}
+
+.hero-content h1{
+
+font-size:90px;
+
+line-height:90px;
+
+letter-spacing:8px;
+
+}
+
+.hero-content p{
+
+margin-top:25px;
+
+font-size:20px;
+
+color:#ddd;
+
+}
+
+.button{
+
+display:inline-block;
+
+margin-top:45px;
+
+padding:18px 42px;
+
+background:white;
+
+color:black;
+
+text-decoration:none;
+
+border-radius:50px;
+
+transition:.4s;
+
+font-weight:600;
+
+}
+
+.button:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 45px rgba(255,255,255,.3);
+
+}
+
+/* =======================
+SECTION
+======================= */
+
+section{
+
+padding:120px 10%;
+
+}
+
+section h2{
+
+font-size:55px;
+
+margin-bottom:60px;
+
+}
+
+/* =======================
+ABOUT
+======================= */
+
+.about{
+
+display:flex;
+
+align-items:center;
+
+gap:70px;
+
+}
+
+.about img{
+
+width:340px;
+
+height:440px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+transition:.5s;
+
+}
+
+.about img:hover{
+
+transform:scale(1.03);
+
+}
+
+.about h3{
+
+font-size:38px;
+
+margin-bottom:25px;
+
+}
+
+.about p{
+
+line-height:2;
+
+font-size:18px;
+
+color:#bdbdbd;
+
+}
+
+/* =======================
+PROJECTS
+======================= */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:#141414;
+
+padding:35px;
+
+border-radius:20px;
+
+transition:.45s;
+
+cursor:pointer;
+
+border:1px solid rgba(255,255,255,.05);
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+background:#1f1f1f;
+
+box-shadow:0 20px 45px rgba(255,255,255,.08);
+
+}
+
+.card h3{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+}
+
+.card p{
+
+color:#aaa;
+
+line-height:1.8;
+
+}
+
+/* =======================
+VIDEOS
+======================= */
+
+.video-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+
+gap:35px;
+
+}
+
+.video-grid video{
+
+width:100%;
+
+border-radius:18px;
+
+transition:.4s;
+
+}
+
+.video-grid video:hover{
+
+transform:scale(1.02);
+
+}
+
+/* =======================
+PHOTO GALLERY
+======================= */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+height:280px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:.45s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* =======================
+CONTACT
+======================= */
+
+.contacts{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:25px;
+
+}
+
+.contacts a{
+
+text-decoration:none;
+
+background:#151515;
+
+padding:18px 35px;
+
+border-radius:40px;
+
+color:white;
+
+transition:.4s;
+
+}
+
+.contacts a:hover{
+
+background:white;
+
+color:black;
+
+}
+
+/* =======================
+FOOTER
+======================= */
+
+footer{
+
+padding:45px;
+
+text-align:center;
+
+color:#777;
+
+}
+
+/* =======================
+ANIMATION
+======================= */
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/* =======================
+SCROLLBAR
+======================= */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#090909;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#555;
+
+border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#999;
+
+}
+
+/* =======================
+RESPONSIVE
+======================= */
+
+@media(max-width:950px){
+
+header{
+
+padding:25px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.hero-content h1{
+
+font-size:55px;
+
+line-height:60px;
+
+}
+
+.about{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.about img{
+
+width:280px;
+
+height:360px;
+
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+section h2{
+
+font-size:40px;
+
+}
+
+.video-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* =======================
+Scroll Reveal
+======================= */
+
+.hidden{
+
+opacity:0;
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+transform:none;
+
+}
+
+/* =======================
+Lightbox
+======================= */
+
+#lightbox{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.92);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+
+cursor:zoom-out;
+
+backdrop-filter:blur(10px);
+
+}
+
+#lightbox.active{
+
+display:flex;
+
+animation:fade .3s;
+
+}
+
+#lightbox img{
+
+max-width:90%;
+max-height:90%;
+
+border-radius:15px;
+
+box-shadow:0 0 40px rgba(255,255,255,.15);
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* =======================
+Top Button
+======================= */
+
+#topButton{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:white;
+
+color:black;
+
+font-size:22px;
+
+cursor:pointer;
+
+opacity:0;
+
+pointer-events:none;
+
+transition:.35s;
+
+z-index:999;
+
+}
+
+#topButton:hover{
+
+transform:translateY(-5px);
+
+}
+
+.showTop{
+
+opacity:1 !important;
+
+pointer-events:auto !important;
+
+}
+
+/* FIX: card link styling */
+a.card {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+/* чтобы не было синего/фиолетового даже после посещения */
+a.card:visited {
+    color: inherit;
+}
+
+/* убираем поведение ссылки при фокусе */
+a.card:focus {
+    color: inherit;
+    outline: none;
+}
